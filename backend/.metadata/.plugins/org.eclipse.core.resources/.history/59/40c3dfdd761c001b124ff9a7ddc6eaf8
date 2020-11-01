@@ -1,0 +1,26 @@
+package br.com.desafiospring.backendemjava.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.desafiospring.backendemjava.models.entities.Cargo;
+import br.com.desafiospring.backendemjava.models.repositories.CargoRepository;
+
+@RestController
+@RequestMapping("/api/Cargo")
+public class CargoController {
+	
+	@Autowired
+	private CargoRepository _ctx;
+	
+	@GetMapping
+	public ResponseEntity<List<Cargo>> getAllCargos(){
+		return (List<Cargo>)List<Cargo> _ctx.findAll();
+		
+	}
+}

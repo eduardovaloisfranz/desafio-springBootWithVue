@@ -513,3 +513,33 @@
 2020-11-01 15:53:11,794 [Worker-100: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2020-11-01 15:53:11,795 [Worker-100: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-11-01 15:53:11,795 [Worker-100: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\duduf\Downloads\backendemjava\src\test\resources
+2020-11-01 16:05:17,434 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:05:17,435 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-01 16:05:17,437 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-01 16:05:17,438 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:05:17,439 [Worker-104: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\duduf\Downloads\backendemjava\src\test\resources
+2020-11-01 16:05:40,407 [Worker-101: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:05:40,409 [Worker-101: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-01 16:05:40,410 [Worker-101: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-01 16:05:40,413 [Worker-101: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:05:40,413 [Worker-101: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\duduf\Downloads\backendemjava\src\test\resources
+2020-11-01 16:15:39,606 [Worker-112: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:15:39,607 [Worker-112: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-01 16:15:39,609 [Worker-112: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-01 16:15:39,611 [Worker-112: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:15:39,611 [Worker-112: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\duduf\Downloads\backendemjava\src\test\resources
+2020-11-01 16:17:22,101 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:17:22,102 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-01 16:17:22,105 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-01 16:17:22,107 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:17:22,107 [Worker-110: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\duduf\Downloads\backendemjava\src\test\resources
+2020-11-01 16:20:07,356 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:20:07,357 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-01 16:20:07,359 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-01 16:20:07,361 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:20:07,361 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\duduf\Downloads\backendemjava\src\test\resources
+2020-11-01 16:38:33,049 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:38:33,052 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-11-01 16:38:33,056 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-11-01 16:38:33,059 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-11-01 16:38:33,059 [Worker-106: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\duduf\Downloads\backendemjava\src\test\resources

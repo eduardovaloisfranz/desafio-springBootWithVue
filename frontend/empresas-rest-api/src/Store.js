@@ -25,8 +25,7 @@ export default new Vuex.Store({
     addCargos(context, payload) {
       context.commit("ADD_CARGO", payload);
     },
-    atualizarFuncionarios(context) {
-      console.log("caiu aqui");
+    atualizarFuncionarios(context) {      
       api
         .get("api/funcionario")
         .then((r) => context.commit("ADD_FUNCIONARIO", r.data))

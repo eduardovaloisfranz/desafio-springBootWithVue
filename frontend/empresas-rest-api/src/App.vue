@@ -13,15 +13,12 @@ export default {
   methods: {
     fetchCargos() {
       api
-        .get("api/cargos")
+        .get("api/Cargos")
         .then(response => this.$store.dispatch("addCargos", response.data));
     }
   },
   created() {
-    this.fetchCargos();
-    setInterval(() => {
-      this.$store.dispatch("atualizarFuncionarios");
-    }, 1500);
+    this.fetchCargos();    
   }
 };
 </script>
