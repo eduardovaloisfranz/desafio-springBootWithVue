@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\duduf\Documents\GitHub\desafio-springBootWithVue\backend\.metadata\.plugins\org.eclipse.jdt.core
+713386484.index
