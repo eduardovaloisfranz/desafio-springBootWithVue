@@ -27,9 +27,16 @@ export default new Vuex.Store({
     },
     atualizarFuncionarios(context) {      
       api
-        .get("api/funcionario")
+        .get("api/Funcionario")
         .then((r) => context.commit("ADD_FUNCIONARIO", r.data))
         .catch((res) => console.log(res));
     },
+    atualizarCargos(context){      
+      api
+        .get("api/Cargo")
+        .then(res => {
+          context.commit("ADD_CARGO", res.data)
+        })
+    }
   },
 });

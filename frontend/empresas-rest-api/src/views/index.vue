@@ -12,8 +12,7 @@
           <thead>
             <tr>
               <th scope="col">Indice</th>
-              <th scope="col">Nome</th>
-              <th scope="col">Fk_Cargo</th>
+              <th scope="col">Nome</th>              
               <th scope="col">Id Cargo</th>
               <th scope="col">Nome do cargo</th>
               <th scope="col">Ações</th>
@@ -23,8 +22,7 @@
           <tbody>
             <tr v-for="(funcionario, idx) in funcionarios" :key="funcionario.id + idx">
               <th scope="row">{{idx}}</th>
-              <td>{{funcionario.nome}}</td>
-              <td>{{funcionario.fk_cargo}}</td>
+              <td>{{funcionario.nome}}</td>              
               <td>{{funcionario.cargo.id}}</td>
               <td>{{funcionario.cargo.nome}}</td>
               <td>
@@ -148,11 +146,14 @@ export default {
           console.log(err);
         });
       if (confirm === true) {
-        api
-          .delete(`api/funcionario/${this.funcionarioSelecionado.id}`)
-          .then(r => console.log(r))
+        await api
+         .delete(`api/Funcionario/${this.funcionarioSelecionado.id}`)
+          .then(() =>{
+             
+            this.$store.dispatch("atualizarFuncionarios");
+             
+             })
           .catch(err => console.log(err));
-        this.$store.dispatch("atualizarFuncionarios");
       } else {
         alert("Registro não apagado!");
       }
@@ -161,21 +162,24 @@ export default {
       this.funcionarioSelecionado = funcionario;
       this.openModal = true;
     },
-    editarFuncionario() {
-      console.log(this.funcionarioSelecionado);
+    async editarFuncionario() {
+      
       let { nome, idade, fk_cargo } = this.novoFuncionario;
 
       let body = {
         nome,
         idade,
-        fk_cargo
+        cargo: {
+          id: fk_cargo
+        }
       };
-      console.log(body);
-      api
-        .put(`api/funcionario/${this.funcionarioSelecionado.id}`, body)
-        .then(r => console.log(r))
+      
+      await api
+        .put(`api/Funcionario/${this.funcionarioSelecionado.id}`, body)
+        .then(() =>{         
+        this.$store.dispatch("atualizarFuncionarios");
+        })
         .catch(r => console.log(r));
-      this.$store.dispatch("atualizarFuncionarios");
       this.openModal = false;
     }
   },

@@ -27,16 +27,56 @@
               <option v-for="cargo in cargos" :key="cargo.id" :value="cargo.id">{{cargo.nome}}</option>
             </select>
           </div>
-          <div class="d-flex justify-content-center">
+          <div class="d-flex justify-content-between">
             <b-button
               :disabled="validarCadastro"
               variant="success"
               type="submit"
             >Cadastrar Funcionario</b-button>
+            <b-button
+            class="ml-2"            
+            variant="outline-success"  
+            @click="exibirModalNovoCargo = true"          
+            >                         
+            Cadastrar Novo Cargo    
+            </b-button>            
           </div>
         </b-form>
       </div>
     </b-col>
+    <b-modal
+     v-model="exibirModalNovoCargo" hide-footer centered title="Cadastrar novo Cargo">
+     <div>
+        <label for="input-live">Nome:</label>
+    <b-form-input
+      id="input-live"
+      v-model="novoCargo.nome"
+      :state="validarCargo"
+      aria-describedby="input-live-help input-live-feedback"
+      placeholder="Digite o Nome"      
+    ></b-form-input>    
+    <b-form-invalid-feedback id="input-live-feedback">
+      Informe o Nome do Cargo
+    </b-form-invalid-feedback>    
+    <b-form-text id="input-live-help">Nome do Cargo.</b-form-text>
+     </div>
+     <div class="d-flex justify-content-end">        
+       <div class="d-flex justify-content-between">
+          <b-button
+          :disabled="!validarCargo"
+          @click="handleAddCargo"
+          variant="success"
+          >
+          Salvar
+          </b-button>
+          <b-button
+          class="ml-2"
+          variant="danger"
+          @click="exibirModalNovoCargo = false">
+          Fechar</b-button>
+       </div>
+     </div>     
+    </b-modal>
   </b-row>
 </template>
 
@@ -51,17 +91,40 @@ export default {
         nome: "",
         idade: 0,
         fk_cargo: 0
-      }
+      },
+      novoCargo: {
+        nome: ""
+      },
+      exibirModalNovoCargo: false
     };
   },
   methods: {
-    cadastrarFuncionario() {
-      api
-        .post("/api/funcionario", this.funcionario)
-        .then(response => console.log(response))
+    async cadastrarFuncionario() {
+      let obj = {
+        nome: this.funcionario.nome,
+        idade: this.funcionario.idade,
+        cargo: {
+          id: this.funcionario.fk_cargo
+        }
+      }
+      await api
+        .post("/api/Funcionario", obj)
+        .then(() => {           
+          this.$store.dispatch("atualizarFuncionarios");          
+          })
         .catch(err => console.log(err));
-      this.$store.dispatch("atualizarFuncionarios");
+    },
+    handleAddCargo(){
+        api
+          .post("/api/Cargo", this.novoCargo)
+            .then(() => {
+              this.$store.dispatch("atualizarCargos")
+            })
+            .finally(() => {
+              this.exibirModalNovoCargo = false;
+            })
     }
+    
   },
   computed: {
     cargos() {
@@ -74,7 +137,11 @@ export default {
         this.fk_cargo === 0
         ? true
         : false;
+    },
+    validarCargo(){
+      return this.novoCargo.nome.length > 5 ? true : false
     }
+
   }
 };
 </script>
