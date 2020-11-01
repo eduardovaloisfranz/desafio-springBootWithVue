@@ -1,0 +1,9 @@
+package br.com.desafiospring.backendemjava.models.repositories;
+
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.desafiospring.backendemjava.models.entities.Funcionario;
+
+public interface FuncionarioRepository extends CrudRepository<Funcionario, Integer>{
+
+}

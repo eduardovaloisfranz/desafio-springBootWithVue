@@ -1,0 +1,6 @@
+package br.com.desafiospring.backendemjava.models;
+
+@Entities
+public class Funcionario {
+
+}
