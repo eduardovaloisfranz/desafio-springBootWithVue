@@ -1,0 +1,6 @@
+spring.datasource.url=jdbc:mysql://MYSQL5030.site4now.net;Database=db_a69d17_springd;
+spring.datasource.username=a69d17_springd
+spring.datasource.password=s3nhasegurakk
+ 
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
